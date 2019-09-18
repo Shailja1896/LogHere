@@ -1,0 +1,55 @@
+.navbar {
+    display: inline-flex !important; 
+    padding: inherit;
+    /* padding: inherit; */
+}
+
+.nav-container {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+}
+
+.nav-logo {
+    /* padding: inherit; */
+    /* text-align: center; */
+}
+
+.logo-text {
+    color: white !important;
+    padding: 12px 44px!important;
+    background-color: #557612;
+    font-size: 25px;
+}
+
+.nav-icon-label {
+    background-color: #c2ed6c;
+    padding: 10px 24px!important;
+}
+
+.nav-icon {
+    font-size: 25px; 
+    color: white !important;
+}
+
+.badge-count {
+    background-color: #ea4663;
+    border-radius: 50%;
+    padding: 0px 9px 2px 9px;
+    position: fixed;
+    color: white!important;
+}
+
+.profile-icon {
+    widows: 17px;
+    border-radius: 50%;
+    float: right;
+    margin-top: 5px;
+}
+
+.img-icon {
+    border-radius: 50%;
+    width: 20px;
+}
+
