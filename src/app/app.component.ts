@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'app';
   private showButton: boolean;
+  private navList = ['/'];
   constructor(private cookieSer: CookieService, private router: Router) { }
   ngOnInit() {
     this.showButton = true;

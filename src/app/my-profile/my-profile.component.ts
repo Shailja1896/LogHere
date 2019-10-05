@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SignInService } from '../services/sigin.service';
+import { ConfigService } from '../services/config.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-profile',
@@ -7,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private configSer: ConfigService, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  logout() {
     debugger;
+    this.configSer.isLoggedIn = false;
+    localStorage.clear();
+    this.router.navigate(['/signin']);
   }
 
 }
