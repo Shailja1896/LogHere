@@ -5,16 +5,49 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { CookieService } from 'ngx-cookie-service';
+import { MyProfileComponent } from './my-profile/my-profile.component';
+import { Routes, RouterModule } from '@angular/router';
+import { AuthguardService } from './app.service';
+import { SigninComponent } from './signin/signin.component';
+import { SignInService } from './services/sigin.service';
+import { ConfigService } from './services/config.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+const appRoutes: Routes = [{
+  path: '',
+  redirectTo: '/my-profile',
+  pathMatch: 'full'
+},
+{
+  path: 'signin',
+  component: SigninComponent,
+  canActivate: [SignInService]
+},
+{
+  path: 'my-profile',
+  component: MyProfileComponent,
+  canActivate: [AuthguardService]
+}];
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyProfileComponent,
+    SigninComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    FormsModule,
   ],
-  providers: [CookieService],
+  providers: [CookieService,
+    AuthguardService,
+    SignInService,
+    ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

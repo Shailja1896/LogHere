@@ -1,0 +1,40 @@
+.login-container {
+    text-align: center;
+    width: 400px;
+    background-color: whitesmoke;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 300px;
+    border-radius: 23px;
+    padding: 2%;
+}
+
+.login-btn {
+    background-color: #82ca33;
+    border-width: 0px;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    color: whitesmoke;
+    margin-top: 25px;
+}
+
+.font-style {
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.err-label {
+    margin: 0px;
+    font-size: 13px;
+    color: red;
+}
+
+.input-box {
+    border: #ddd0d0 solid 1px;
+    border-radius: 6px;
+}

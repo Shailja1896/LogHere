@@ -1,0 +1,19 @@
+<div class="login-container">
+  <p>
+    LOGIN
+  </p>
+  <form [formGroup]="signInForm">
+    <span class="row">
+      <span class="col col-sm-4" style="text-align: right"><label>Name</label></span>
+      <span class="col col-sm-8" style="text-align: left"><input class="input-box" formControlName="username" name="somethingAutofillDoesntKnow" type="text"></span>
+    </span><br>
+    <span class="row">
+      <span class="col col-sm-4" style="text-align: right;"><label>Password</label></span>
+      <span class="col col-sm-8" style="text-align: left"><input class="input-box" formControlName="password" type="password"></span>
+    </span>
+    <p *ngIf="showErrorMsg" class="err-label">Incorrect username or password</p>
+    <button class="login-btn" (click)="login()" [disabled]="SignIn?.invalid">Login</button><br>
+  </form>
+  <a class="font-style">SignIn</a><br>
+  <a class="font-style">Forget Password?</a>
+</div>
