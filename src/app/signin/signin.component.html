@@ -4,11 +4,11 @@
   </p>
   <form [formGroup]="signInForm">
     <span class="row">
-      <span class="col col-sm-4" style="text-align: right"><label>Name</label></span>
+      <span class="col col-sm-4 input-label"><label>Name</label></span>
       <span class="col col-sm-8" style="text-align: left"><input class="input-box" formControlName="username" name="somethingAutofillDoesntKnow" type="text"></span>
     </span><br>
     <span class="row">
-      <span class="col col-sm-4" style="text-align: right;"><label>Password</label></span>
+      <span class="col col-sm-4 input-label"><label>Password</label></span>
       <span class="col col-sm-8" style="text-align: left"><input class="input-box" formControlName="password" type="password"></span>
     </span>
     <p *ngIf="showErrorMsg" class="err-label">Incorrect username or password</p>

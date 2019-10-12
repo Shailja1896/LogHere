@@ -10,9 +10,16 @@ import { Router } from '@angular/router';
 })
 export class MyProfileComponent implements OnInit {
 
-  constructor(private configSer: ConfigService, private router: Router) { }
+  constructor(private configSer: ConfigService, private router: Router, private siginService: SignInService) { }
 
+  test1 = false;
   ngOnInit() {
+  }
+
+  test() {
+    debugger;
+    this.test1 = !this.test1;
+    this.siginService.canActivate();
   }
 
   logout() {
