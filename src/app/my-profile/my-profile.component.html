@@ -13,7 +13,7 @@
                     <a class="nav-icon"><i class="fa fa-envelope"></i></a>&emsp;&emsp;&emsp;
                 </li>
                 <li class="nav-item">
-                    <a class="nav-icon"><i class="fa fa-bell"></i></a><span class="badge-count">3</span>
+                    <a class="nav-icon" (click)="openNotification()"><i class="fa fa-bell"></i></a><span class="badge-count">3</span>
                 </li>
                 <!-- <li class="nav-item nav-img">
                     <a class="nav-icon">Test</a>
@@ -26,8 +26,9 @@
         </nav>
     </div><br>
 
-    <button (click)="test()">Test</button>
+    <!-- <button (click)="test()">Test</button>
     <p *ngIf="test1;else other_content">if true</p>
-    <ng-template #other_content>fyfymnm</ng-template>
+    <ng-template #other_content>fyfymnm</ng-template> -->
+    <app-notification-sidebar *ngIf="showNotificationSidebar" (closeSidebar)="closeNotificationSidebar($event)"></app-notification-sidebar>
 </body>
 <!-- <p #other_content>fyfymnm</p> -->

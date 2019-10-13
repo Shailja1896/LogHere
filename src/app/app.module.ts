@@ -13,6 +13,7 @@ import { SignInService } from './services/sigin.service';
 import { ConfigService } from './services/config.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NotificationSidebarComponent } from './notification-sidebar/notification-sidebar.component';
 
 const appRoutes: Routes = [{
   path: '',
@@ -35,7 +36,8 @@ const appRoutes: Routes = [{
   declarations: [
     AppComponent,
     MyProfileComponent,
-    SigninComponent
+    SigninComponent,
+    NotificationSidebarComponent
   ],
   imports: [
     BrowserModule,

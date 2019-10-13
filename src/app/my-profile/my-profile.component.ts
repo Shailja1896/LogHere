@@ -13,6 +13,7 @@ export class MyProfileComponent implements OnInit {
   constructor(private configSer: ConfigService, private router: Router, private siginService: SignInService) { }
 
   test1 = false;
+  showNotificationSidebar: boolean;
   ngOnInit() {
   }
 
@@ -22,11 +23,19 @@ export class MyProfileComponent implements OnInit {
     this.siginService.canActivate();
   }
 
+  openNotification() {
+    this.showNotificationSidebar = true;
+  }
+
   logout() {
     debugger;
     this.configSer.isLoggedIn = false;
     localStorage.clear();
     this.router.navigate(['/signin']);
+  }
+
+  closeNotificationSidebar($event: boolean) {
+    this.showNotificationSidebar = false;
   }
 
 }
