@@ -38,7 +38,7 @@ const appRoutes: Routes = [{
     AppComponent,
     MyProfileComponent,
     SigninComponent,
-    MyErrorDirective
+    MyErrorDirective,
     NotificationSidebarComponent
   ],
   imports: [
