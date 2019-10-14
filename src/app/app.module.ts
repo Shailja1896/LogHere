@@ -14,6 +14,7 @@ import { ConfigService } from './services/config.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyErrorDirective } from './directives/highlighrEroor';
+import { NotificationSidebarComponent } from './notification-sidebar/notification-sidebar.component';
 
 const appRoutes: Routes = [{
   path: '',
@@ -38,6 +39,7 @@ const appRoutes: Routes = [{
     MyProfileComponent,
     SigninComponent,
     MyErrorDirective
+    NotificationSidebarComponent
   ],
   imports: [
     BrowserModule,

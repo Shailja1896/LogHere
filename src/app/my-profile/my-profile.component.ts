@@ -10,9 +10,21 @@ import { Router } from '@angular/router';
 })
 export class MyProfileComponent implements OnInit {
 
-  constructor(private configSer: ConfigService, private router: Router) { }
+  constructor(private configSer: ConfigService, private router: Router, private siginService: SignInService) { }
 
+  test1 = false;
+  showNotificationSidebar: boolean;
   ngOnInit() {
+  }
+
+  test() {
+    debugger;
+    this.test1 = !this.test1;
+    this.siginService.canActivate();
+  }
+
+  openNotification() {
+    this.showNotificationSidebar = true;
   }
 
   logout() {
@@ -20,6 +32,10 @@ export class MyProfileComponent implements OnInit {
     this.configSer.isLoggedIn = false;
     localStorage.clear();
     this.router.navigate(['/signin']);
+  }
+
+  closeNotificationSidebar($event: boolean) {
+    this.showNotificationSidebar = false;
   }
 
 }
