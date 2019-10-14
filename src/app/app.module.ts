@@ -13,6 +13,7 @@ import { SignInService } from './services/sigin.service';
 import { ConfigService } from './services/config.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MyErrorDirective } from './directives/highlighrEroor';
 
 const appRoutes: Routes = [{
   path: '',
@@ -35,14 +36,18 @@ const appRoutes: Routes = [{
   declarations: [
     AppComponent,
     MyProfileComponent,
-    SigninComponent
+    SigninComponent,
+    MyErrorDirective
   ],
   imports: [
     BrowserModule,
+    // RouterModule.forRoot(appRoutes, {
+    //   enableTracing: true
+    // }),
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [CookieService,
     AuthguardService,

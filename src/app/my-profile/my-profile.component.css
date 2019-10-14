@@ -1,0 +1,38 @@
+.side-link:hover {
+    background-color: #ebe9e9;
+}
+
+.side-link {
+    display: block;
+    padding: 1%;
+    margin-bottom: 22px;
+    border-radius: 4px;
+}
+
+.profile-img {
+    border-radius: 50%; 
+    height: 140px; 
+    width: 50%;
+}
+
+.img-container {
+    text-align: center;
+    margin-bottom: 15px;
+    background-color: #ebe9e9;
+    padding-top: 10px;
+}
+
+.side-nav {
+    background-color: whitesmoke;
+    height: 100vh;
+    overflow: auto;
+    width: 20%;
+    padding: 1%;
+   
+}
+
+@media only screen and (min-width: 600px) {
+    .img-container {
+      background-color: lightblue;
+    }
+  }
