@@ -9,7 +9,6 @@ export class SignInService {
     constructor(private router: Router, private config: ConfigService) { }
 
     canActivate() {
-        debugger;
         const username = localStorage.getItem('username');
         if (username) {
             this.router.navigate(['/my-profile']);

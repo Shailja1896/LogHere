@@ -33,7 +33,6 @@ export class SigninComponent implements OnInit {
   get middleName() { return this.signInForm.get('password'); }
 
   login() {
-    debugger;
     if (this.signInForm.value.username === this.loginCred.name && this.signInForm.value.password === this.loginCred.password) {
       this.showErrorMsg = false;
       this.configSer.isLoggedIn = true;

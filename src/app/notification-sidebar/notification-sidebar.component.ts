@@ -9,7 +9,7 @@ export class NotificationSidebarComponent implements OnInit {
 
   constructor() { }
 
-  @Output() closeSidebar: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() closeSidebar: EventEmitter<any> = new EventEmitter<any>();
 
   ngOnInit() {
   }

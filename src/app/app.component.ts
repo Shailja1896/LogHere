@@ -17,7 +17,6 @@ export class AppComponent {
     this.cookieSer.set('name', 'shailja');
     const test = this.cookieSer.get('name');
     const test1 = this.cookieSer.getAll();
-    debugger;
   }
 
   navigate() {
